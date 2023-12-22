@@ -1,0 +1,67 @@
+{
+  "display_information": {
+    "name": "tonberry",
+    "description": "tonberry-bot",
+    "background_color": "#29428c"
+  },
+  "features": {
+    "app_home": {
+      "home_tab_enabled": true,
+      "messages_tab_enabled": false,
+      "messages_tab_read_only_enabled": true
+    },
+    "bot_user": {
+      "display_name": "tonberry",
+      "always_online": true
+    },
+    "shortcuts": [
+      {
+        "name": "Run sample shortcut",
+        "type": "global",
+        "callback_id": "sample_shortcut_id",
+        "description": "Runs a sample shortcut"
+      }
+    ],
+    "slash_commands": [
+      {
+        "command": "/sample-command",
+        "url": "https://crystal-gemini-jktnfc4g3a-an.a.run.app/slack/events",
+        "description": "Runs a sample command",
+        "should_escape": false
+      }
+    ]
+  },
+  "oauth_config": {
+    "redirect_urls": [
+      "https://crystal-gemini-jktnfc4g3a-an.a.run.app/slack/oauth_redirect"
+    ],
+    "scopes": {
+      "bot": [
+        "app_mentions:read",
+        "channels:history",
+        "chat:write",
+        "commands",
+        "files:read",
+        "files:write",
+        "channels:manage"
+      ]
+    }
+  },
+  "settings": {
+    "event_subscriptions": {
+      "request_url": "https://crystal-gemini-jktnfc4g3a-an.a.run.app/slack/events",
+      "bot_events": [
+        "app_home_opened",
+        "app_mention",
+        "message.channels"
+      ]
+    },
+    "interactivity": {
+      "is_enabled": true,
+      "request_url": "https://crystal-gemini-jktnfc4g3a-an.a.run.app/slack/events"
+    },
+    "org_deploy_enabled": false,
+    "socket_mode_enabled": false,
+    "token_rotation_enabled": false
+  }
+}
