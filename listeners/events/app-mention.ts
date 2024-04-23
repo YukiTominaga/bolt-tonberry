@@ -32,7 +32,6 @@ const appMentionCallback = async ({
     // eslint-disable-next-line no-restricted-syntax
     for await (const chunk of stream) {
       responseText += chunk;
-      console.log(responseText);
       chunkCount += 1;
       if (chunkCount >= 30) {
         await client.chat.update({
